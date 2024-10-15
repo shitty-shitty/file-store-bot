@@ -62,6 +62,16 @@
         "value": "0",
         "required": false
       },
+      "FORCE_SUB_CHANNEL3": {
+        "description": "Enter your channel id for forcesub 1",
+        "value": "0",
+        "required": false
+      },
+      "FORCE_SUB_CHANNEL4": {
+        "description": "Enter your channel id for forcesub 1",
+        "value": "0",
+        "required": false
+      },
       "BOT_STATS_TEXT": {
         "description": "Enter your custom bot stat text with fillings",
         "value": "<b>BOT UPTIME</b>\n{uptime}",
