@@ -194,14 +194,14 @@ async def start_command(client: Client, message: Message):
                     link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'{newLink}')
                     if USE_PAYMENT:
                         btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link),
-                        InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
+                        [InlineKeyboardButton("ᴠᴇʀɪꜰʏ 🎀", url=link)
+                        InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ 🥲', url=TUT_VID)],
                         [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
                         ]
                     else:
                         btn = [
-                        [InlineKeyboardButton("Click Here 👆", url=link)],
-                        [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                        [InlineKeyboardButton("ᴠᴇʀɪꜰʏ 🎀", url=link)],
+                        [InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ 🥲', url=TUT_VID)]
                         ]
                     await message.reply(f"Total clicks {clicks}. Here is your link 👇.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
                     return
@@ -246,14 +246,14 @@ async def start_command(client: Client, message: Message):
             link = await get_shortlink(SHORTLINK_API_URL, SHORTLINK_API_KEY,f'https://telegram.dog/{client.username}?start=verify_{token}')
             if USE_PAYMENT:
                 btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link),
-                InlineKeyboardButton('How to open this link 👆', url=TUT_VID)],
+                [InlineKeyboardButton("ᴠᴇʀɪꜰʏ 🎀", url=link),
+                InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ 🥲', url=TUT_VID)],
                 [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
                 ]
             else:
                 btn = [
-                [InlineKeyboardButton("Click Here 👆", url=link)],
-                [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
+                [InlineKeyboardButton("ᴠᴇʀɪꜰʏ 🎀", url=link)],
+                [InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ 🥲', url=TUT_VID)]
                 ]
             await message.reply(f"ʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀꜱ ᴇxᴘɪʀᴇᴅ! ❌❌\n\n<b><u>ɴᴏᴛᴇ:</b></u> ᴛᴏ ɪᴍᴘʀᴏᴠᴇ ᴛʜᴇ ʙᴏᴛ'ꜱ ᴇꜰꜰɪᴄɪᴇɴᴄʏ, ᴏɴʟʏ ᴠᴇʀɪꜰɪᴇᴅ ᴜꜱᴇʀꜱ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ꜰɪʟᴇꜱ. ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ɪꜱ ʀᴇQᴜɪʀᴇᴅ <u>ᴏɴᴄᴇ ᴇᴠᴇʀʏ 12 ʜᴏᴜʀꜱ</u> ꜰᴏʀ ᴜɴɪɴᴛᴇʀʀᴜᴘᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴀʟʟ ɪɴꜰᴏʜᴜʙ ɴᴇᴛᴡᴏʀᴋꜱ ʟɪɴᴋꜱ.\n\nᴄʟɪᴄᴋ ᴛʜᴇ 'ᴠᴇʀɪꜰʏ' ʙᴜᴛᴛᴏɴ ᴛᴏ ꜱᴛᴀʀᴛ ᴛʜᴇ ᴘʀᴏᴄᴇꜱꜱ. ɪꜰ ʏᴏᴜ'ʀᴇ ᴜɴꜱᴜʀᴇ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ, ᴄʟɪᴄᴋ 'ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ' ʙᴜᴛᴛᴏɴ ꜰᴏʀ ᴀ ᴅᴇᴛᴀɪʟᴇᴅ ᴠɪᴅᴇᴏ ɢᴜɪᴅᴇ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
             return
