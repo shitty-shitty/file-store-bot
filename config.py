@@ -12,12 +12,9 @@ from logging.handlers import RotatingFileHandler
 #force user to join your backup channel leave 0 if you don't need.
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002215102799"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002001392051"))
-
-if FORCE_SUB_CHANNEL > FORCE_SUB_CHANNEL2:
-    temp = FORCE_SUB_CHANNEL2 
-    FORCE_SUB_CHANNEL2 = FORCE_SUB_CHANNEL
-    FORCE_SUB_CHANNEL = temp
-
+FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "-1002215102799"))
+FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "-1002001392051"))
+
 #bot stats
 BOT_STATS_TEXT = os.environ.get("BOTS_STATS_TEXT","<b>BOT UPTIME </b>\n{uptime}")
 #send custom message when user interact with bot
