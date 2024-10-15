@@ -35,11 +35,11 @@ async def start_command(client: Client, message: Message):
             if "verify_" in message.text:
                 _, token = message.text.split("_", 1)
                 if verify_status['verify_token'] != token:
-                    return await message.reply("Your token is invalid or Expired ⌛. Try again by clicking /start")
+                    return await message.reply("ᴇʜʜ, ᴛʜᴇ ᴛᴏᴋᴇɴ ʀᴇᴄᴇɪᴠᴇᴅ ɪꜱ ᴀɴ ɪɴᴠᴀʟɪᴅ ᴏʀ ᴇxᴘɪʀᴇᴅ ᴏɴᴇ. ᴘʟᴇᴀꜱᴇ ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ꜱᴇɴᴅɪɴɢ ᴍᴇ ᴛʜᴇ /start ᴄᴏᴍᴍᴀɴᴅ")
                 await update_verify_status(id, is_verified=True, verified_time=time.time())
                 if verify_status["link"] == "":
                     reply_markup = None
-                await message.reply(f"Your token successfully verified and valid for: {get_exp_time(VERIFY_EXPIRE)} ⏳", reply_markup=reply_markup, protect_content=False, quote=True)
+                await message.reply(f"ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ ʙᴜᴅᴅʏ!! 🎉\n\nʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀꜱ ʙᴇᴇɴ ʀᴇᴄᴇɪᴠᴇᴅ ᴀɴᴅ ᴠᴇʀɪꜰɪᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!\n\n<i>ʏᴏᴜ ᴡɪʟʟ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴍᴇ ꜰᴏʀ ᴛʜᴇ ɴᴇxᴛ 12 ʜᴏᴜʀꜱ!</i>\n\nʜᴀᴠᴇ ᴀ ɢᴏᴏᴅ ᴅᴀʏ ᴀʜᴇᴀᴅ! 🚀", reply_markup=reply_markup, protect_content=False, quote=True)
     if len(message.text) > 7:
         for i in range(1):
             if USE_SHORTLINK and (not U_S_E_P):
@@ -84,11 +84,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[3]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Please wait... 🫷")
+                temp_msg = await message.reply("Give me a second here...⏳")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Something went wrong..! 🥲")
+                    await message.reply_text("Ehh, Something went wrong! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -110,14 +110,14 @@ async def start_command(client: Client, message: Message):
                         pass
                 if (SECONDS == 0):
                     return
-                notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                notification_msg = await message.reply(f"❗❕ <u>ʀᴇᴍɪɴᴅᴇʀ</u> ❗❕\n\n<b>ᴛʜᴇ ꜱᴇɴᴛ ꜰɪʟᴇ(ꜱ) ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ɪɴ {get_exp_time(SECONDS)}.\n\n<i>ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇᴍ ᴛᴏ ʏᴏᴜʀ ᴘᴇʀꜱᴏɴᴀʟ ꜱᴀᴠᴇᴅ ᴍᴇꜱꜱᴀɢᴇꜱ ꜰɪʀꜱᴛ ᴀɴᴅ ᴛʜᴇɴ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴛʜᴇᴍ ᴛʜᴇʀᴇ.</i>")
                 await asyncio.sleep(SECONDS)    
                 for snt_msg in snt_msgs:    
                     try:    
                         await snt_msg.delete()  
                     except: 
                         pass    
-                await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                await notification_msg.edit("<b>ᴛʜᴇ ꜱᴇɴᴛ ꜰɪʟᴇ(ꜱ) ʜᴀᴠᴇ ʙᴇᴇɴ ᴅᴇʟᴇᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ. ʜᴏᴘᴇ ʏᴏᴜ ʜᴀᴠᴇ ꜰᴏʀᴡᴀʀᴅᴇᴅ ᴛʜᴇᴍ ᴛᴏ ʏᴏᴜʀ ᴘᴇʀꜱᴏɴᴀʟ ꜱᴀᴠᴇᴅ ᴍᴇꜱꜱᴀɢᴇꜱ ʙʏ ɴᴏᴡ! 🌚</b>")  
                 return
             if (U_S_E_P):
                 if verify_status['is_verified'] and VERIFY_EXPIRE < (time.time() - verify_status['verified_time']):
@@ -145,11 +145,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[1]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Please wait... 🫷")
+                temp_msg = await message.reply("Give me a second here...⏳")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Something went wrong..! 🥲")
+                    await message.reply_text("Ehh, Something went wrong! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -173,14 +173,14 @@ async def start_command(client: Client, message: Message):
                 if snt_msgs:
                     if (SECONDS == 0):
                         return
-                    notification_msg = await message.reply(f"<b>🌺 <u>Notice</u> 🌺</b>\n\n<b>This file will be  deleted in {get_exp_time(SECONDS)}. Please save or forward it to your saved messages before it gets deleted.</b>")
+                    notification_msg = await message.reply(f"❗❕ <u>ʀᴇᴍɪɴᴅᴇʀ</u> ❗❕\n\n<b>ᴛʜᴇ ꜱᴇɴᴛ ꜰɪʟᴇ(ꜱ) ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ɪɴ {get_exp_time(SECONDS)}.\n\n<i>ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇᴍ ᴛᴏ ʏᴏᴜʀ ᴘᴇʀꜱᴏɴᴀʟ ꜱᴀᴠᴇᴅ ᴍᴇꜱꜱᴀɢᴇꜱ ꜰɪʀꜱᴛ ᴀɴᴅ ᴛʜᴇɴ ꜱᴛᴀʀᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴛʜᴇᴍ ᴛʜᴇʀᴇ.</i>")
                     await asyncio.sleep(SECONDS)    
                     for snt_msg in snt_msgs:    
                         try:    
                             await snt_msg.delete()  
                         except: 
                             pass    
-                    await notification_msg.edit("<b>Your file has been successfully deleted! 😼</b>")  
+                    await notification_msg.edit("<b>ᴛʜᴇ ꜱᴇɴᴛ ꜰɪʟᴇ(ꜱ) ʜᴀᴠᴇ ʙᴇᴇɴ ᴅᴇʟᴇᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ. ʜᴏᴘᴇ ʏᴏᴜ ʜᴀᴠᴇ ꜰᴏʀᴡᴀʀᴅᴇᴅ ᴛʜᴇᴍ ᴛᴏ ʏᴏᴜʀ ᴘᴇʀꜱᴏɴᴀʟ ꜱᴀᴠᴇᴅ ᴍᴇꜱꜱᴀɢᴇꜱ ʙʏ ɴᴏᴡ! 🌚</b>")  
                     return
             except:
                     newbase64_string = await encode(f"sav-ory-{_string}")
@@ -255,7 +255,7 @@ async def start_command(client: Client, message: Message):
                 [InlineKeyboardButton("Click Here 👆", url=link)],
                 [InlineKeyboardButton('How to open this link 👆', url=TUT_VID)]
                 ]
-            await message.reply(f"Your Ads token is expired, refresh your token and try again. \n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for {get_exp_time(VERIFY_EXPIRE)} after passing the ad", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+            await message.reply(f"ʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀꜱ ᴇxᴘɪʀᴇᴅ! ❌❌\n\n<b><u>ɴᴏᴛᴇ:</b></u> ᴛᴏ ɪᴍᴘʀᴏᴠᴇ ᴛʜᴇ ʙᴏᴛ'ꜱ ᴇꜰꜰɪᴄɪᴇɴᴄʏ, ᴏɴʟʏ ᴠᴇʀɪꜰɪᴇᴅ ᴜꜱᴇʀꜱ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ꜰɪʟᴇꜱ. ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ɪꜱ ʀᴇQᴜɪʀᴇᴅ <u>ᴏɴᴄᴇ ᴇᴠᴇʀʏ 12 ʜᴏᴜʀꜱ</u> ꜰᴏʀ ᴜɴɪɴᴛᴇʀʀᴜᴘᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴀʟʟ ɪɴꜰᴏʜᴜʙ ɴᴇᴛᴡᴏʀᴋꜱ ʟɪɴᴋꜱ.\n\nᴄʟɪᴄᴋ ᴛʜᴇ 'ᴠᴇʀɪꜰʏ' ʙᴜᴛᴛᴏɴ ᴛᴏ ꜱᴛᴀʀᴛ ᴛʜᴇ ᴘʀᴏᴄᴇꜱꜱ. ɪꜰ ʏᴏᴜ'ʀᴇ ᴜɴꜱᴜʀᴇ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ, ᴄʟɪᴄᴋ 'ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ' ʙᴜᴛᴛᴏɴ ꜰᴏʀ ᴀ ᴅᴇᴛᴀɪʟᴇᴅ ᴠɪᴅᴇᴏ ɢᴜɪᴅᴇ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
             return
     return
 
