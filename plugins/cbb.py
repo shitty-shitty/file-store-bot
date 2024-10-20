@@ -9,7 +9,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-                        text = f"<b>○ Creator : <a href='https://t.me/infohub_updates'>ɪɴꜰᴏʜᴜʙ ᴜᴘᴅᴀᴛᴇꜱ</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ ʟɪʙʀᴀʀʏ : <a href='https://t.me/book_novel_pdfs_audiobooks_free'>ᴘᴀɢᴇꜱ & ᴠᴏɪᴄᴇꜱ</a></a>",
+                        text = f"<b>○ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/infohub_updates'>ɪɴꜰᴏʜᴜʙ ᴜᴘᴅᴀᴛᴇꜱ</a>\n○ ʟᴀɴɢᴜᴀɢᴇ : <code>ᴘʏᴛʜᴏɴ3</code>\n○ ʟɪʙʀᴀʀʏ : <a href='https://t.me/book_novel_pdfs_audiobooks_free'>ᴘᴀɢᴇꜱ & ᴠᴏɪᴄᴇꜱ</a>\n○ ꜱᴇʀᴠᴇʀ : <a href='https://www.heroku.com/'>ʜᴇʀᴏᴋᴜ</a></a>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
@@ -32,7 +32,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(
                 [   
                     [
-                        InlineKeyboardButton("Send Payment Screenshot(ADMIN) 📸", url=(SCREENSHOT_URL))
+                        InlineKeyboardButton("ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ 📸", url=(SCREENSHOT_URL))
                     ],
                     [
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
