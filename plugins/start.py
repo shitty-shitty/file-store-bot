@@ -84,11 +84,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[3]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Give me a second here...⏳")
+                temp_msg = await message.reply("ɢɪᴠᴇ ᴍᴇ ᴀ ꜱᴇᴄᴏɴᴅ ʜᴇʀᴇ...⏳")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Ehh, Something went wrong! 🥲")
+                    await message.reply_text("ᴇʜʜ, ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -145,11 +145,11 @@ async def start_command(client: Client, message: Message):
                         ids = [int(int(argument[1]) / abs(client.db_channel.id))]
                     except:
                         return
-                temp_msg = await message.reply("Give me a second here...⏳")
+                temp_msg = await message.reply("ɢɪᴠᴇ ᴍᴇ ᴀ ꜱᴇᴄᴏɴᴅ ʜᴇʀᴇ...⏳")
                 try:
                     messages = await get_messages(client, ids)
                 except:
-                    await message.reply_text("Ehh, Something went wrong! 🥲")
+                    await message.reply_text("ᴇʜʜ, ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ! 🥲")
                     return
                 await temp_msg.delete()
                 snt_msgs = []
@@ -220,6 +220,8 @@ async def start_command(client: Client, message: Message):
                 [
                     InlineKeyboardButton("😊 About Me", callback_data="about"),
                     InlineKeyboardButton("🔒 Close", callback_data="close")
+                ],[
+                    InlineKeyboardButton("🍿ᴍᴏᴠɪᴇꜱ & ᴡᴇʙꜱᴇʀɪᴇꜱ", url='https://t.me/Cinemas_Movies_Webseries')
                 ]
             ]
         )
@@ -248,7 +250,7 @@ async def start_command(client: Client, message: Message):
                 btn = [
                 [InlineKeyboardButton("ᴠᴇʀɪꜰʏ 🎀", url=link)],
                 [InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ 🥲', url=TUT_VID)],
-                [InlineKeyboardButton("Buy Premium plan", callback_data="buy_prem")]
+                [InlineKeyboardButton("ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buy_prem")]
                 ]
             else:
                 btn = [
@@ -273,12 +275,12 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink2),
+            InlineKeyboardButton(text="⌬ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ✇", url=client.invitelink),
+            InlineKeyboardButton(text="✇ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ⌬", url=client.invitelink2),
         ],
         [
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink4),
+            InlineKeyboardButton(text="〄 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ⍟", url=client.invitelink3),
+            InlineKeyboardButton(text="⍟ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 〄", url=client.invitelink4),
         ]
     ]
     try:
@@ -342,7 +344,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
 
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time ⌚</i>")
+        pls_wait = await message.reply("<i>ʙʀᴏᴀᴅᴄᴀꜱᴛɪɴɢ ᴍᴇꜱꜱᴀɢᴇ.. ᴛʜɪꜱ ᴍᴀʏ ᴀɴᴅ ᴡɪʟʟ ᴛᴀᴋᴇ ꜱᴏᴍᴇ ᴛɪᴍᴇ ⌛</i>")
         for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)
@@ -364,11 +366,11 @@ async def send_text(client: Bot, message: Message):
 
         status = f"""<b><u>Broadcast Completed 🟢</u>
                 
-                Total Users: <code>{total}</code>
-                Successful: <code>{successful}</code>
-                Blocked Users: <code>{blocked}</code>
-                Deleted Accounts: <code>{deleted}</code>
-                Unsuccessful: <code>{unsuccessful}</code></b>"""
+                ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{total}</code>
+                ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟ: <code>{successful}</code>
+                ʙʟᴏᴄᴋᴇᴅ ᴜꜱᴇʀꜱ: <code>{blocked}</code>
+                ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛꜱ: <code>{deleted}</code>
+                ᴜɴꜱᴜᴄᴄᴇꜱꜱꜰᴜʟ: <code>{unsuccessful}</code></b>"""
 
         return await pls_wait.edit(status)
 
@@ -470,11 +472,11 @@ async def check_ping_command(client: Bot, message: Message):
 @Client.on_message(filters.private & filters.command('restart') & filters.user(ADMINS))
 async def restart(client, message):
     msg = await message.reply_text(
-        text="<i>Trying To Restarting.....</i>",
+        text="<i>ʀᴇꜱᴛᴀʀᴛɪɴɢ ᴛʜᴇ ꜱᴇʀᴠᴇʀꜱ 🔃</i>",
         quote=True
     )
     await asyncio.sleep(5)
-    await msg.edit("<i>Server Restarted Successfully ✅</i>")
+    await msg.edit("<i>ꜱᴇʀᴠᴇʀꜱ ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ✅</i>")
     try:
         os.execl(sys.executable, sys.executable, *sys.argv)
     except Exception as e:
@@ -486,18 +488,18 @@ if USE_PAYMENT:
     async def add_user_premium_command(client: Bot, message: Message):
         while True:
             try:
-                user_id = await client.ask(text="Enter id of user 🔢\n /cancel to cancel : ",chat_id = message.from_user.id, timeout=60)
+                user_id = await client.ask(text="ᴇɴᴛᴇʀ ᴛʜᴇ ɪᴅ ᴏꜰ ᴜꜱᴇʀ 🔢\n\nᴘʀᴇꜱꜱ /cancel ᴛᴏ ᴄᴀɴᴄᴇʟ: ",chat_id = message.from_user.id, timeout=60)
             except Exception as e:
                 print(e)
                 return  
             if user_id.text == "/cancel":
-                await user_id.edit("Cancelled 😉!")
+                await user_id.edit("ᴘʀᴏᴄᴇꜱꜱ ᴄᴀɴᴄᴇʟʟᴇᴅ!")
                 return
             try:
                 await Bot.get_users(user_ids=user_id.text, self=client)
                 break
             except:
-                await user_id.edit("❌ Error 😖\n\nThe admin id is incorrect.", quote = True)
+                await user_id.edit("❌ ᴇʀʀᴏʀ 😖\n\nᴛʜᴇ ᴜꜱᴇʀ ɪᴅ ɪꜱ ɪɴᴄᴏʀʀᴇᴄᴛ.", quote = True)
                 continue
         user_id = int(user_id.text)
         while True:
@@ -527,7 +529,7 @@ if USE_PAYMENT:
             await message.reply("Premium added! 🤫")
             await client.send_message(
             chat_id=user_id,
-            text=f"Update for you\n\nPremium plan of {timestring} added to your account. 🤫",
+            text=f"ᴀ ʟᴏᴠᴇʟʏ ᴜᴘᴅᴀᴛᴇ ꜰᴏʀ ʏᴏᴜ ʜᴇʀᴇ!\n\nᴀ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ ᴏꜰ {timestring} ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ꜰᴏʀ ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ! ✨",
         )
         except Exception as e:
             print(e)
