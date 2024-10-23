@@ -102,7 +102,7 @@ PRICE5 = os.environ.get("PRICE5", "500 rs")
 #force message for joining the channel
 FORCE_MSG = os.environ.get("FORCE_MSG", "ʜᴇʟʟᴏ ᴛʜᴇʀᴇ {mention}!!👋\n\n<b>ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴇꜱ, ʏᴏᴜ ᴀʀᴇ ʀᴇQᴜᴇꜱᴛᴇᴅ ᴛᴏ ꜱᴜᴘᴘᴏʀᴛ ᴜꜱ ʙʏ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ:</b>")
 #custom caption 
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @book_novel_pdfs_audiobooks_free</b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @dailybooks_tg •</b>")
 #protected content so that no files can be sent from the bot to anyone. recommended False
 # TRUE for yes FALSE if no
 PROTECT_CONTENT = True if os.environ.get("PROTECT_CONTENT", "FALSE") == "TRUE" else False
