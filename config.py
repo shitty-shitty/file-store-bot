@@ -57,7 +57,7 @@ https://dashboard.shareus.io/
 
 # Turn this feature on or off using True or False put value inside  ""
 # TRUE for yes FALSE if no 
-USE_SHORTLINK = True if os.environ.get('USE_SHORTLINK', "TRUE") == "TRUE" else False 
+USE_SHORTLINK = True if os.environ.get('USE_SHORTLINK', "False") == "TRUE" else False 
 # only shareus service known rightnow rest you can test on your own
 SHORTLINK_API_URL = os.environ.get("SHORTLINK_API_URL", "hypershort.com")
 # SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "beb3b795a226177f3af7c937a2f01d5d7d4f4cf0")
