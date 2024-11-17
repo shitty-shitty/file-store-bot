@@ -221,7 +221,7 @@ async def start_command(client: Client, message: Message):
                     InlineKeyboardButton("😊 About Me", callback_data="about"),
                     InlineKeyboardButton("🔒 Close", callback_data="close")
                 ],[
-                    InlineKeyboardButton("🍿ᴍᴏᴠɪᴇꜱ & ᴡᴇʙꜱᴇʀɪᴇꜱ", url='https://t.me/Cinemas_Movies_Webseries')
+                    InlineKeyboardButton("🍿ᴍᴏᴠɪᴇꜱ & ᴡᴇʙꜱᴇʀɪᴇꜱ", url='https://t.me/webseries_robot')
                 ]
             ]
         )
