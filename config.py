@@ -57,7 +57,7 @@ https://dashboard.shareus.io/
 
 # Turn this feature on or off using True or False put value inside  ""
 # TRUE for yes FALSE if no 
-USE_SHORTLINK = True if os.environ.get('USE_SHORTLINK', "False") == "TRUE" else False 
+USE_SHORTLINK = True if os.environ.get('USE_SHORTLINK', "True") == "TRUE" else False 
 # only shareus service known rightnow rest you can test on your own
 SHORTLINK_API_URL = os.environ.get("SHORTLINK_API_URL", "hypershort.com")
 # SHORTLINK_API_KEY = os.environ.get("SHORTLINK_API_KEY", "beb3b795a226177f3af7c937a2f01d5d7d4f4cf0")
@@ -89,7 +89,7 @@ SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/{OWNER_TAG}")
 #7 Days
 PRICE1 = os.environ.get("PRICE1", "20 rs")
 #1 Month
-PRICE2 = os.environ.get("PRICE2", "49 rs")
+PRICE2 = os.environ.get("PRICE2", "84 rs")
 #3 Month
 PRICE3 = os.environ.get("PRICE3", "135 rs")
 #6 Month
@@ -102,7 +102,7 @@ PRICE5 = os.environ.get("PRICE5", "500 rs")
 #force message for joining the channel
 FORCE_MSG = os.environ.get("FORCE_MSG", "ʜᴇʟʟᴏ ᴛʜᴇʀᴇ {mention}!!👋\n\n<b>ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴇꜱ, ʏᴏᴜ ᴀʀᴇ ʀᴇQᴜᴇꜱᴛᴇᴅ ᴛᴏ ꜱᴜᴘᴘᴏʀᴛ ᴜꜱ ʙʏ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ:</b>")
 #custom caption 
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @Bookslibraryofficial \n\nHave a good day ahead! 🎀</b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ʙʏ @Bookslibraryofficial \n\nHave a great day ahead! 🎀</b>")
 #protected content so that no files can be sent from the bot to anyone. recommended False
 # TRUE for yes FALSE if no
 PROTECT_CONTENT = True if os.environ.get("PROTECT_CONTENT", "FALSE") == "TRUE" else False
