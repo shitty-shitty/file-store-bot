@@ -103,7 +103,7 @@ PRICE5 = os.environ.get("PRICE5", "500 rs")
 FORCE_MSG = os.environ.get("FORCE_MSG", "ʜᴇʟʟᴏ ᴛʜᴇʀᴇ {mention}!!👋\n\n<b>ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴇꜱ, ʏᴏᴜ ᴀʀᴇ ʀᴇQᴜᴇꜱᴛᴇᴅ ᴛᴏ ꜱᴜᴘᴘᴏʀᴛ ᴜꜱ ʙʏ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ:</b>")
 #custom caption 
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>• ᴘʀᴇꜱᴇɴᴛᴇᴅ ʙʏ @Bookslibraryofficial\n\n╔════ ꜱᴜʙꜱᴄʀɪʙᴇ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ════╗
-▫️<a href=https://youtube.com/@pagesandvoices> ᴘᴀɢᴇꜱ & ᴠᴏɪᴄᴇꜱ ▫️</a>
+▫️https://youtube.com/@pagesandvoices▫️</a>
 ╚════ ꜱᴜʙꜱᴄʀɪʙᴇ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ════╝</b>")
 #protected content so that no files can be sent from the bot to anyone. recommended False
 # TRUE for yes FALSE if no
