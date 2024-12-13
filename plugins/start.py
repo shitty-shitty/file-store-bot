@@ -218,10 +218,12 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data="about"),
-                    InlineKeyboardButton("🔒 Close", callback_data="close")
+                    InlineKeyboardButton("💝 ꜱᴜʙꜱᴄʀɪʙᴇ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ", url='youtube.com/@pagesandvoices')
                 ],[
-                    InlineKeyboardButton("🍿ᴍᴏᴠɪᴇꜱ & ᴡᴇʙꜱᴇʀɪᴇꜱ", url='https://t.me/cinemas_robot')
+                    InlineKeyboardButton("🍿 ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url='https://t.me/cinemas_robot'),
+                    InlineKeyboardButton("😊 ᴀʙᴏᴜᴛ ᴍᴇ", callback_data="about")
+                ],[
+                    InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
                 ]
             ]
         )
