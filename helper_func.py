@@ -12,68 +12,31 @@ from database.database import user_data, db_verify_status, db_update_verify_stat
 
 
 async def is_subscribed(filter, client, update):
-    if not FORCE_SUB_CHANNEL:
+    if not (FORCE_SUB_CHANNEL or FORCE_SUB_CHANNEL2 or FORCE_SUB_CHANNEL3 or FORCE_SUB_CHANNEL4):
         return True
+
     user_id = update.from_user.id
+
     if user_id in ADMINS:
         return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
-    except UserNotParticipant:
-        return False
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    else:
-        return True
+    member_status = ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER
 
-async def is_subscribed2(filter, client, update):
-    if not FORCE_SUB_CHANNEL2:
-        return True
-    user_id = update.from_user.id
-    if user_id in ADMINS:
-        return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
-    except UserNotParticipant:
-        return False
+    for channel_id in [FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, FORCE_SUB_CHANNEL3, FORCE_SUB_CHANNEL4]:
+        if not channel_id:
+            continue
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    else:
-        return True
+        try:
+            member = await client.get_chat_member(chat_id=channel_id, user_id=user_id)
+        except UserNotParticipant:
+            return False
 
-async def is_subscribed3(filter, client, update):
-    if not FORCE_SUB_CHANNEL3:
-        return True
-    user_id = update.from_user.id
-    if user_id in ADMINS:
-        return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL3, user_id = user_id)
-    except UserNotParticipant:
-        return False
+        if member.status not in member_status:
+            return False
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    else:
-        return True
+    return True
 
-async def is_subscribed4(filter, client, update):
-    if not FORCE_SUB_CHANNEL4:
-        return True
-    user_id = update.from_user.id
-    if user_id in ADMINS:
-        return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL4, user_id = user_id)
-    except UserNotParticipant:
-        return False
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    else:
-        return True
 
 async def encode(string):
     string_bytes = string.encode("ascii")
@@ -197,4 +160,4 @@ async def increasepremtime(user_id : int, timeforprem : int):
     await update_verify_status(user_id, is_verified=True, verified_time=time.time()+realtime)
 
 subscribed = filters.create(is_subscribed)
-subscribed2 = filters.create(is_subscribed2)
+
