@@ -78,7 +78,7 @@ TUT_VID = os.environ.get("TUT_VID","https://t.me/infohub_updates/34")
 
 #Payment to remove the token system
 #put TRUE if you want this feature
-USE_PAYMENT = True if (True if os.environ.get("USE_PAYMENT", "False") == "TRUE" else False) and (USE_SHORTLINK) else False
+USE_PAYMENT = True if (True if os.environ.get("USE_PAYMENT", "TRUE") == "TRUE" else False) and (USE_SHORTLINK) else False
 #UPI ID
 UPI_ID = os.environ.get("UPI_ID", "rajsom8877@okaxis")
 #UPI QR CODE IMAGE
@@ -87,15 +87,15 @@ UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://envs.sh/wLE.jpg")
 SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/{OWNER_TAG}")
 #Time and its price
 #7 Days
-PRICE1 = os.environ.get("PRICE1", "20 rs")
+PRICE1 = os.environ.get("PRICE1", "18 INR")
 #1 Month
-PRICE2 = os.environ.get("PRICE2", "84 rs")
+PRICE2 = os.environ.get("PRICE2", "20 INR")
 #3 Month
-PRICE3 = os.environ.get("PRICE3", "135 rs")
+PRICE3 = os.environ.get("PRICE3", "58 INR")
 #6 Month
-PRICE4 = os.environ.get("PRICE4", "250 rs")
+PRICE4 = os.environ.get("PRICE4", "118 INR")
 #1 Year
-PRICE5 = os.environ.get("PRICE5", "500 rs")
+PRICE5 = os.environ.get("PRICE5", "238 INR")
 
 
 
