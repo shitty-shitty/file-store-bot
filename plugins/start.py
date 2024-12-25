@@ -220,7 +220,7 @@ async def start_command(client: Client, message: Message):
                 [
                     InlineKeyboardButton("💝 ꜱᴜʙꜱᴄʀɪʙᴇ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ", url='youtube.com/@pagesandvoices')
                 ],[
-                    InlineKeyboardButton("🍿 ᴇɴᴛᴇʀᴛᴀɪɴᴍᴇɴᴛ", url='https://t.me/cinemas_robot'),
+                    InlineKeyboardButton("💸 ᴘʀᴇᴍɪᴜᴍ", callback_data="buy_prem"),
                     InlineKeyboardButton("😊 ᴀʙᴏᴜᴛ ᴍᴇ", callback_data="about")
                 ],[
                     InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
