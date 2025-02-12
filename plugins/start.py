@@ -218,9 +218,9 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("💝 ꜱᴜʙꜱᴄʀɪʙᴇ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ", url='youtube.com/@pagesandvoices')
+                    InlineKeyboardButton("Main channel💝", url='https://t.me/karin_anime_world')
                 ],[
-                    InlineKeyboardButton("💸 ᴘʀᴇᴍɪᴜᴍ", callback_data="buy_prem"),
+                    InlineKeyboardButton("🦋 Developer", url='https://t.me/infohub_updates'),
                     InlineKeyboardButton("😊 ᴀʙᴏᴜᴛ ᴍᴇ", callback_data="about")
                 ],[
                     InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
