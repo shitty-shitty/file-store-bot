@@ -220,7 +220,7 @@ async def start_command(client: Client, message: Message):
                 [
                     InlineKeyboardButton("Main channel💝", url='https://t.me/karin_anime_world')
                 ],[
-                    InlineKeyboardButton("🦋 Developer", url='https://t.me/infohub_updates'),
+                    InlineKeyboardButton("🦋 Developer", url='https://t.me/trinityXmods'),
                     InlineKeyboardButton("😊 ᴀʙᴏᴜᴛ ᴍᴇ", callback_data="about")
                 ],[
                     InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
