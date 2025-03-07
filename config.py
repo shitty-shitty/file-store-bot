@@ -23,7 +23,7 @@ BOT_STATS_TEXT = os.environ.get("BOTS_STATS_TEXT","<b>BOT UPTIME </b>\n{uptime}"
 USER_REPLY_TEXT = os.environ.get("USER_REPLY_TEXT", "This bot only work for @karin_anime_world")
 
 #your bot token here from https://telegram.me/BotFather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7417863621:AAG3DMM_5xyTJ5wGiXPZpC5wpycPVO9UXT8") 
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7417863621:AAG7TSNlIQBgA778nSHOfPpG2ZMQQmoW73I") 
 #your api id from https://my.telegram.org/apps
 APP_ID = int(os.environ.get("APP_ID", "23015141"))
 #your api hash from https://my.telegram.org/apps
